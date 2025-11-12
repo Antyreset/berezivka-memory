@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <title>Спогади | Світло пам’яті</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+   <header class="main-header">
+  <div class="flag-banner">
+    <div class="blue-stripe"></div>
+    <div class="yellow-stripe"></div>
+    <div class="hero-banner-text">ГЕРОЇ НЕ ВМИРАЮТЬ</div>
+  </div>
+
+  <div class="header-inner">
+    <div class="symbol-left">
+      <img src="assets/images/prapor-berezivka.png" alt="Прапор Березівського району">
+    </div>
+
+    <div class="content-wrapper">
+      <h1>Спогади</h1>
+      <p class="subtitle">Це простір, де пам’ять говорить. Тут звучать голоси тих, хто пам’ятає.</p>
+    </div>
+
+    <div class="symbol-right">
+      <img src="assets/images/herbb-berezivka.jpg" alt="Герб міста Березівка">
+    </div>
+  </div>
+</header>
+
+  <nav role="navigation" aria-label="Головне меню">
+    <ul class="main-menu">
+      <li><a href="index.html">Головна</a></li>
+      <li><a href="heroes.html">Герої</a></li>
+      <li><a href="map.html">Мапа пам’яті</a></li>
+      <li><a href="memories.html" class="active">Спогади</a></li>
+      <li><a href="join.html">Як долучитися</a></li>
+    </ul>
+  </nav>
+   <aside class="left-aside"></aside>
+  <aside class="right-aside"></aside>
+  <main>
+    <h1>Голос пам'яті</h1>
+    <p class="subtitle">Це простір, де пам’ять говорить. Тут звучать голоси тих, хто пам’ятає.</p>
+    <section id="memories-container">
+      <!-- JavaScript вставить спогади тут -->
+    </section>
+     <form class="memory-form" method="post" enctype="multipart/form-data" action="submitMemory.php">
+  <h2 class="form-title">Залишіть свій спогад</h2>
+  <p class="form-subtitle">Ми збережемо його з гідністю.</p>
+
+  <div class="form-group">
+    <label for="author">Ваше ім’я:</label>
+    <input type="text" name="author" id="author" required />
+  </div>
+
+  <div class="form-group">
+    <label for="hero">Ім’я Героя:</label>
+    <input type="text" name="hero" id="hero" required />
+  </div>
+
+  <div class="form-group">
+     <label for="memory">Спогад:</label>
+<textarea name="memory" id="memory" rows="6" required></textarea>
+  </div>
+
+   <div class="form-group">
+   
+  <label for="photo" class="custom-file-label">Обрати фото</label>
+  <input type="file" name="photo" id="photo" class="hidden-file" accept="image/*" />
+  <span id="file-name">Файл не обрано</span>
+</div>
+
+  <div class="form-group">
+    <button type="submit">Надіслати</button>
+  </div>
+</form>
+  </main>
+  <footer>
+  <div class="content-wrapper">
+    <p>Проєкт створено з любов’ю та вдячністю. Березівка-2025</p>
+  </div>
+</footer>
+  <script src="assets/js/loadMemories.js"></script>
+</body>
+</html>

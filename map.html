@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мапа пам’яті | Світло пам’яті</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+    <header class="main-header">
+  <div class="flag-banner">
+    <div class="blue-stripe"></div>
+    <div class="yellow-stripe"></div>
+    <div class="hero-banner-text">ГЕРОЇ НЕ ВМИРАЮТЬ</div>
+  </div>
+
+  <div class="header-inner">
+    <div class="symbol-left">
+      <img src="assets/images/prapor-berezivka.png" alt="Прапор Березівського району">
+    </div>
+
+    <div class="content-wrapper">
+      <h1>Мапа пам’яті</h1>
+      <p class="subtitle">Кожна точка — це імення, кожна координата — це світло</p>
+    </div>
+
+    <div class="symbol-right">
+      <img src="assets/images/herbb-berezivka.jpg" alt="Герб міста Березівка">
+    </div>
+  </div>
+</header>
+  <nav role="navigation" aria-label="Головне меню">
+  <ul class="main-menu">
+    <li><a href="index.html">Головна</a></li>
+    <li><a href="heroes.html">Герої</a></li>
+    <li><a href="map.html">Мапа пам’яті</a></li>
+    <li><a href="memories.html">Спогади</a></li>
+    <li><a href="join.html">Як долучитися</a></li>
+  </ul>
+</nav>
+  <main>
+    <h1>Мапа пам’яті</h1>
+    <div id="map" style="height: 600px;"></div>
+  </main>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="assets/js/map.js"></script>
+</body>
+</html>

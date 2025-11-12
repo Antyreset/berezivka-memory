@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Імена Героїв | Світло пам’яті</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+   <header class="main-header">
+  <div class="flag-banner">
+    <div class="blue-stripe"></div>
+    <div class="yellow-stripe"></div>
+    <div class="hero-banner-text">ГЕРОЇ НЕ ВМИРАЮТЬ</div>
+  </div>
+
+  <div class="header-inner">
+    <div class="symbol-left">
+      <img src="assets/images/prapor-berezivka.png" alt="Прапор Березівського району">
+    </div>
+
+    <div class="content-wrapper">
+      <h1>Імена Героїв</h1>
+      <p class="subtitle">Ця сторінка — як поле свічок, де кожне ім’я світиться в тиші</p>
+    </div>
+
+    <div class="symbol-right">
+      <img src="assets/images/herbb-berezivka.jpg" alt="Герб міста Березівка">
+    </div>
+  </div>
+</header>
+
+  <nav role="navigation" aria-label="Головне меню">
+    <ul>
+      <li><a href="index.html">Головна</a></li>
+      <li><a href="map.html">Мапа пам’яті</a></li>
+      <li><a href="memories.html">Спогади</a></li>
+      <li><a href="join.html">Як долучитися</a></li>
+    </ul>
+  </nav>
+
+  <aside class="left-aside"></aside>
+  <aside class="right-aside"></aside>
+
+  <main>
+    <div class="content-wrapper">
+      <div class="filters-bar">
+  <label for="sortSelect">Відобразити за:</label>
+  <select id="sortSelect">
+    <option value="default">За замовчуванням</option>
+    <option value="name">За алфавітом (А–Я)</option>
+    <option value="birthDate">За датою народження (↑)</option>
+    <option value="deathDate">За датою смерті (↑)</option>
+  </select>
+  <div class="search-bar">
+  <input type="text" id="searchInput" placeholder="Пошук за іменем або підрозділом..." />
+    </div>
+</div>
+      <div id="heroes-container">
+        <!-- JavaScript вставить картки героїв тут -->
+      </div>
+      <div id="pagination" class="pagination-buttons">
+  <!-- JavaScript вставить кнопки сторінок тут -->
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="content-wrapper">
+      <p>Проєкт створено з любов’ю та вдячністю. Березівка-2025</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/loadHeroes.js"></script>
+</body>
+</html>
