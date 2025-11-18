@@ -341,7 +341,7 @@ footer .content-wrapper {
 
   / Герб — наближаємо до тексту /
   .symbol-right img {
-    margin-left: 0;
+    margin-left: -30;
     max-width: 50px;
     height: auto;
   }
