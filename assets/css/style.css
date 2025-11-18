@@ -334,7 +334,7 @@ footer .content-wrapper {
   .subtitle { font-size: 16px; }
 / Прапор — трохи відсуваємо /
   .symbol-left img {
-    margin-right: 10px;
+    margin-right: 30px;
     max-width: 50px;
     height: auto;
   }
