@@ -393,6 +393,7 @@ footer .content-wrapper {
   .symbol-right {
     margin: 0 5px;       /* невеликий горизонтальний відступ */
     flex: 0 0 auto;
+   padding-top: 10px;
   }
 
   /* Прапор */
