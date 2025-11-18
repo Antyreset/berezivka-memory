@@ -388,23 +388,26 @@ footer .content-wrapper {
     align-items: center;
   }
 
+   / Контейнери символів /
   .symbol-left,
   .symbol-right {
     margin: 0 5px; / невеликий горизонтальний відступ /
+    flex: 0 0 auto;
   }
 
+  / Прапор /
   .symbol-left img {
     max-height: 60px;
     width: auto;
-    margin-top: -5px;   / трохи підняти /
-    margin-right: 5px;  / відсунути прапор від тексту /
+    margin-top: -10px;   / трохи підняти /
+    margin-right: 10px;  / відсунути від тексту /
   }
-
+  / Герб /
   .symbol-right img {
     max-height: 60px;
     width: auto;
-    margin-top: 10px;   / щоб не «вивалювався» /
-    margin-left: 25px;      / наблизити герб до тексту /
+    margin-top: -10px;   / щоб не «вивалювався» /
+    margin-left: 0;      / наблизити до тексту /
   }
  .hero-card {
   width: 100%;
