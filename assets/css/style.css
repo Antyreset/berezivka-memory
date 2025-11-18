@@ -384,37 +384,23 @@ footer .content-wrapper {
   }
 
   .header-inner {
-   display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-   padding-top: 20px;
-  }
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start; /* вирівнює по верхньому краю */
+}
 
- /* Контейнери символів */
-  .symbol-left,
-  .symbol-right {
-    margin: 0 5px;       /* невеликий горизонтальний відступ */
-    flex: 0 0 auto;
-  }
+.symbol-left,
+.symbol-right {
+  flex: 0 0 auto;
+  margin: 0 5px; /* невеликий горизонтальний відступ */
+  padding-top: 20px; /* опускає символи вниз */
+}
 
-  /* Прапор */
-  .symbol-left img {
-    max-height: 60px;    /* компактний прапор */
-    width: auto;
-   margin-bottom: 20px !important;
-    margin-right: 0px;  /* відсунути від тексту */
-  }
-
-  /* Герб */
-  .symbol-right img {
-    max-height: 60px;    /* компактний герб */
-    width: auto;
-   margin-top: 20px;
-    margin-left: 10px;      /* наблизити до тексту */
-  }
-  .symbol-left img,
+.symbol-left img,
 .symbol-right img {
-  transform: translateY(20px); /* примусово опускає картинку вниз */
+  max-height: 60px;
+  width: auto;
+  display: block;
   }
  
  .hero-card {
