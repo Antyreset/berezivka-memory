@@ -412,7 +412,10 @@ footer .content-wrapper {
    margin-top: 20px;
     margin-left: 10px;      /* наблизити до тексту */
   }
-  
+  .symbol-left img,
+.symbol-right img {
+  transform: translateY(20px); /* примусово опускає картинку вниз */
+  }
  
  .hero-card {
   width: 100%;
