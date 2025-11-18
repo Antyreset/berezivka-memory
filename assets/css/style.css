@@ -396,14 +396,14 @@ footer .content-wrapper {
   .symbol-left img {
     max-height: 60px;
     width: auto;
-    margin-top: -20px;   / трохи підняти /
+    margin-top: -15px;   / трохи підняти /
     margin-right: 10px;  / відсунути прапор від тексту /
   }
 
   .symbol-right img {
     max-height: 60px;
     width: auto;
-    margin-top: -20px;   / щоб не «вивалювався» /
+    margin-top: -15px;   / щоб не «вивалювався» /
     margin-left: 0;      / наблизити герб до тексту /
   }
  .hero-card {
