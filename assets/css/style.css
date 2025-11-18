@@ -57,6 +57,7 @@ header h2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+ flex-wrap: wrap;
 }
 .subtitle {
   font-size: 18px;
