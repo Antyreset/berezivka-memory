@@ -386,6 +386,7 @@ footer .content-wrapper {
   .header-inner {
     flex-direction: column;
     align-items: center;
+   padding-top: 20px;
   }
 
  /* Контейнери символів */
