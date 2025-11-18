@@ -186,30 +186,41 @@ main .content-wrapper {
   height: 60px;
 }
 
- /* Бокові асайди */
-.left-aside, .right-aside {
+/* === Бокові асайди === */
+.left-aside,
+.right-aside {
   box-shadow: inset 0 0 40px rgba(255, 255, 255, 0.05);
   position: fixed;
-  
   width: 200px;
   height: 70vh;
+  max-height: 600px;
+  overflow-y: auto;
   background-size: cover;
   background-position: center;
-  background-blend-mode:lighten;
+  background-blend-mode: lighten;
   opacity: 0.55;
   z-index: 0;
-  pointer-events: none; /* щоб не блокували кліки */
-  filter:brightness(1.2);
+  pointer-events: none;
+  filter: brightness(1.2);
 }
 
+/* === Шляхи до зображень для GitHub Pages === */
 .left-aside {
   left: 20px;
-  background-image: url('../images/photoM.png'); /* заміни на своє зображення */
+  background-image: url('assets/images/photoM.png'); /* заміни на своє зображення */
 }
 
 .right-aside {
   right: 20px;
-  background-image: url('../images/photoI.png'); /* заміни на своє зображення */
+  background-image: url('assets/images/photoI.png'); /* заміни на своє зображення */
+}
+
+/* === Адаптивність: приховати асайди на мобільному === */
+@media (max-width: 768px) {
+  .left-aside,
+  .right-aside {
+    display: none;
+  }
 }
 
 .wick {
