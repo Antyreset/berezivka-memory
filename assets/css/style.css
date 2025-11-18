@@ -1,4 +1,4 @@
- /* === Глобальні стилі === */
+  /* === Глобальні стилі === */
 html {
   scroll-behavior: smooth;
 }
@@ -26,10 +26,13 @@ header {
 }
 .header-inner {
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   max-width: 100%;
   padding: 0 1rem;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 .symbol-left, .symbol-right {
   flex: 0 0 auto;
@@ -182,11 +185,11 @@ main .content-wrapper {
 }
 .left-aside {
   left: 20px;
-  background-image: url('../images/photoM.png');
+  background-image: url('assets/images/photoM.png');
 }
 .right-aside {
   right: 20px;
-  background-image: url('../images/photoI.png');
+  background-image: url('assets/images/photoI.png');
 }
 
 /* === Форма пам’яті === */
@@ -290,12 +293,9 @@ footer .content-wrapper {
     padding: 0 10px;
   }
 
-  .flag-banner { width: 100%; }
-  .hero-banner-text { font-size: 18px; }
-
   .left-aside, .right-aside { display: none; }
 
   main .content-wrapper,
   footer .content-wrapper {
-    max-width: 
-
+    max-width: 100%;
+   
