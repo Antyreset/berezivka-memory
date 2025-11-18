@@ -54,6 +54,10 @@ header h2 {
   color: #e63946; /* калиновий червоний */
 }
 .header-inner {
+ max-width: 100%;
+  width: 100%;
+  padding: 0 1rem;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: space-between;
