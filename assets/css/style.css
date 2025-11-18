@@ -403,7 +403,7 @@ footer .content-wrapper {
   .symbol-right img {
     max-height: 60px;
     width: auto;
-    margin-top: -10px;   / щоб не «вивалювався» /
+    margin-top: 10px;   / щоб не «вивалювався» /
     margin-left: 25px;      / наблизити герб до тексту /
   }
  .hero-card {
