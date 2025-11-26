@@ -329,12 +329,11 @@ footer .content-wrapper {
 }
 /* Адаптивність */
  @media (max-width: 768px) {
-   header {
-    width: 100%;          /* розтягується на всю ширину */
-    display: block;       /* діти йдуть один під одним */
-    overflow: hidden;     /* запобігає обрізанню контенту */
-    padding: 0;           /* прибирає зайві відступи */
-  }
+    header {
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden; /* нічого не вилізе за межі */
+}
 
   header h1 { font-size: 32px; }
   header h2 { font-size: 20px; }
@@ -392,15 +391,18 @@ footer .content-wrapper {
 
   .header-inner {
   width: 100%;
-  box-sizing: border-box;
   display: flex;
-  flex-wrap: wrap; /* щоб елементи переносилися, а не вивалювалися */
+  justify-content: center; /* або space-between, залежно від задуму */
+  flex-wrap: wrap; /* щоб елементи переносилися, а не ламали макет */
 }
+
 
 .header-inner img, 
 .header-inner svg, 
-.header-inner .content-wrapper {
+.header-inner div {
   max-width: 100%;
+  height: auto;
+  box-sizing: border-box;
 }
 
 .symbol-left,
