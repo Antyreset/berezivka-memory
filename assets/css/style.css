@@ -402,7 +402,7 @@ footer .content-wrapper {
     width: auto;
 }
 
-.content-wrapper {
+header.content-wrapper {
  flex:1;
   text-align: center;
 }
