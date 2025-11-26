@@ -519,3 +519,16 @@ footer .content-wrapper {
   border: 1px solid #ccc;
   border-radius: 6px;
 }
+/* На вузькому екрані — вертикально */
+@media (max-width: 480px) {
+  .header-inner {
+    flex-direction: column;   /* елементи стають один під одним */
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header-inner .text {
+    text-align: center;
+    margin: 10px 0;           /* невеликий відступ між текстом і символами */
+  }
+}
