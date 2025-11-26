@@ -389,14 +389,13 @@ footer .content-wrapper {
     padding: 0 10px;
   }
 
-  .header-inner {
-  width: 100%;
+   .header-inner {
   display: flex;
-  justify-content: space-between; /* або space-between, залежно від задуму */
-    align-items: center;
-   box-sizing: border-box;
-  flex-wrap: nowrap; /* щоб елементи не переносилися */
+  align-items: center;       /* вирівнює по вертикалі */
+  justify-content: space-between; /* прапор ліворуч, герб праворуч */
+  width: 100%;
 }
+
 .header-inner .text {
   text-align: center;
   flex: 1; /* займає простір між прапором і гербом */
