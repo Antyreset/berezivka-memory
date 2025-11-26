@@ -392,8 +392,17 @@ footer .content-wrapper {
   .header-inner {
   width: 100%;
   display: flex;
-  justify-content: center; /* або space-between, залежно від задуму */
+  justify-content: space-between; /* або space-between, залежно від задуму */
+   box-sizing: border-box;
   flex-wrap: wrap; /* щоб елементи переносилися, а не ламали макет */
+}
+.header-inner .text {
+  text-align: center;
+  flex: 1; /* займає простір між прапором і гербом */
+}
+.header-inner img {
+  max-height: 80px; /* щоб не були зависокі */
+  height: auto;
 }
 
 
