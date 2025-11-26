@@ -25,8 +25,6 @@ header {
   background-color: #1a1a1a;
 }
  
- 
-
 
 
 .symbol-left img,
@@ -56,9 +54,6 @@ header h2 {
   color: #e63946; /* калиновий червоний */
 }
 .header-inner {
-  width: 100%;
-  padding: 0 1rem;
-  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -329,33 +324,10 @@ footer .content-wrapper {
 }
 /* Адаптивність */
  @media (max-width: 768px) {
-    header {
-  width: 100%;
-  box-sizing: border-box;
-  overflow: hidden; /* нічого не вилізе за межі */
-}
-
   header h1 { font-size: 32px; }
   header h2 { font-size: 20px; }
   .subtitle { font-size: 16px; }
- 
-  .filters-bar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
 
-.search-bar {
-  width: 100%;
-  justify-content: center;
-  display: flex;
-}
-
-#searchInput {
-  max-width: 240px;
-  width: 100%;
-}
   nav ul {
     flex-direction: column;
     align-items: center;
@@ -389,47 +361,21 @@ footer .content-wrapper {
     padding: 0 10px;
   }
 
-   .header-inner {
-  display: flex;
-  align-items: center;       /* вирівнює по вертикалі */
-  justify-content: space-between; /* прапор ліворуч, герб праворуч */
-  width: 100%;
-}
+  .header-inner {
+    flex-direction: column;
+    align-items: center;
+  }
 
-.header-inner .text {
-  text-align: center;
-  flex: 1; /* займає простір між прапором і гербом */
-}
-.header-inner img {
-  max-height: 80px; /* щоб не були зависокі */
-  height: auto;
-}
+  .symbol-left,
+  .symbol-right {
+    margin: 10px 0;
+  }
 
-
-.header-inner img, 
-.header-inner svg, 
-.header-inner div {
-  max-width: 100%;
-  height: auto;
-  box-sizing: border-box;
-}
-
-.symbol-left,
-.symbol-right {
-  flex: 0 0 auto;
-}
-
- .symbol-left img,
-.symbol-right img {
- max-height: 60px; /* менші символи на мобільних */
-    width: auto;
-}
-
-.header-inner.content-wrapper {
- flex:1;
-  text-align: center;
-}
- 
+  .symbol-left img,
+  .symbol-right img {
+    height: 100px;
+    margin-top: 0;
+  }
  .hero-card {
   width: 100%;
   max-width: 300px;
@@ -518,17 +464,4 @@ footer .content-wrapper {
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 6px;
-}
-/* На вузькому екрані — вертикально */
-@media (max-width: 480px) {
-  .header-inner {
-    flex-direction: column;   /* елементи стають один під одним */
-    justify-content: center;
-    align-items: center;
-  }
-
-  .header-inner .text {
-    text-align: center;
-    margin: 10px 0;           /* невеликий відступ між текстом і символами */
-  }
 }
