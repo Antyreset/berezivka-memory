@@ -393,8 +393,9 @@ footer .content-wrapper {
   width: 100%;
   display: flex;
   justify-content: space-between; /* або space-between, залежно від задуму */
+    align-items: center;
    box-sizing: border-box;
-  flex-wrap: wrap; /* щоб елементи переносилися, а не ламали макет */
+  flex-wrap: nowrap; /* щоб елементи не переносилися */
 }
 .header-inner .text {
   text-align: center;
