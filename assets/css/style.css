@@ -386,7 +386,7 @@ footer .content-wrapper {
    .header-inner {
   display: flex;
   align-items: center;   /* вирівнює по центру вертикально */
-  justify-content: center;
+  justify-content: space-between;
   gap: 20px;             /* відстань між елементами */
   padding: 20px;
 }
@@ -404,6 +404,7 @@ footer .content-wrapper {
 }
 
 .content-wrapper {
+ flex:1;
   text-align: center;
 }
  
