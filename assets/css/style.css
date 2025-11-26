@@ -294,6 +294,9 @@ footer {
   background-color: #1a1a1a;
   font-size: 14px;
   color: #aaa;
+ position: relative; /* або fixed/absolute, але головне — задати */
+  z-index: 0;         /* футер нижче */
+
 }
 footer .content-wrapper {
   max-width: calc(100% - 440px);
