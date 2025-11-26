@@ -329,6 +329,13 @@ footer .content-wrapper {
 }
 /* Адаптивність */
  @media (max-width: 768px) {
+   header {
+    width: 100%;          /* розтягується на всю ширину */
+    display: block;       /* діти йдуть один під одним */
+    overflow: hidden;     /* запобігає обрізанню контенту */
+    padding: 0;           /* прибирає зайві відступи */
+  }
+
   header h1 { font-size: 32px; }
   header h2 { font-size: 20px; }
   .subtitle { font-size: 16px; }
