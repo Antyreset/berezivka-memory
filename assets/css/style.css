@@ -390,12 +390,17 @@ footer .content-wrapper {
     padding: 0 10px;
   }
 
-   .header-inner {
+  .header-inner {
+  width: 100%;
+  box-sizing: border-box;
   display: flex;
-  align-items: center;   /* вирівнює по центру вертикально */
-  justify-content: space-between;
-  gap: 10px;             /* відстань між елементами */
-  padding: 10px;
+  flex-wrap: wrap; /* щоб елементи переносилися, а не вивалювалися */
+}
+
+.header-inner img, 
+.header-inner svg, 
+.header-inner .content-wrapper {
+  max-width: 100%;
 }
 
 .symbol-left,
