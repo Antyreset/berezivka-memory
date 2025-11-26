@@ -196,7 +196,7 @@ main .content-wrapper {
   background-size: cover;
   background-position: center;
   background-blend-mode:lighten;
-  opacity: 0.55;
+  opacity: 0.9;
   z-index: 3;
   pointer-events: none; /* щоб не блокували кліки */
   filter:brightness(1.2);
