@@ -1,4 +1,4 @@
-/* Глобальні налаштування */
+ /* Глобальні налаштування */
 html {
   scroll-behavior: smooth;
 }
@@ -195,9 +195,9 @@ main .content-wrapper {
   height: 70vh;
   background-size: cover;
   background-position: center;
-  background-blend-mode:lighten;
-  opacity: 0.55;
-  z-index: 0;
+  background-blend-mode:multiply;
+  opacity: 1;
+  z-index: 3;
   pointer-events: none; /* щоб не блокували кліки */
   filter:brightness(1.2);
 }
@@ -294,6 +294,9 @@ footer {
   background-color: #1a1a1a;
   font-size: 14px;
   color: #aaa;
+ position: relative; /* або fixed/absolute, але головне — задати */
+  z-index: 0;         /* футер нижче */
+
 }
 footer .content-wrapper {
   max-width: calc(100% - 440px);
@@ -374,7 +377,7 @@ footer .content-wrapper {
   .symbol-left img,
   .symbol-right img {
     height: 100px;
-    margin-top: 0;
+    margin-top: -5px;
   }
  .hero-card {
   width: 100%;
@@ -464,4 +467,12 @@ footer .content-wrapper {
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 6px;
+}
+/* === Прізвище та ім'я=покликання на сторінку (колір) === */
+.hero-name a {
+  color: #ffffff;   /* білий колір */
+  text-decoration: none;
+}
+.hero-name a:hover {
+  color: #ffd700;   /* золотий при наведенні */
 }
