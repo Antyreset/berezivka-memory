@@ -468,3 +468,11 @@ footer .content-wrapper {
   border: 1px solid #ccc;
   border-radius: 6px;
 }
+/* === Прізвище та ім'я=покликання на сторінку (колір) === */
+.hero-name a {
+  color: #ffffff;   /* білий колір */
+  text-decoration: none;
+}
+.hero-name a:hover {
+  color: #ffd700;   /* золотий при наведенні */
+}
