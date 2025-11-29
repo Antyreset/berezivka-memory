@@ -188,15 +188,37 @@ body.hero-page {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    background: none;   /* прибираємо орнамент */
+    padding-right: 0;   /* щоб не було порожнечі */
   }
 
   .hero-photo {
-    width: 70%;
+    width: 100%;        /* фото займає всю ширину */
+    max-width: 320px;   /* але не більше 320px */
     margin-bottom: 15px;
   }
 
   .hero-info {
-    width: 100%;
-    text-align: left;
+    width: 100%;        /* текст розтягується на всю ширину */
+    text-align: left;   /* щоб не був надто вузьким */
+  }
+
+  .hero-bio p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .hero-info h1 {
+    font-size: 22px;
+  }
+
+  .hero-quote blockquote {
+    font-size: 18px;
+    padding: 15px 20px;
+  }
+
+  .hero-quote blockquote::before,
+  .hero-quote blockquote::after {
+    font-size: 32px;
   }
 }
