@@ -182,3 +182,21 @@ body.hero-page {
   color: #666;
   text-align: right;
 }
+/* --- Адаптивність --- */
+@media (max-width: 768px) {
+  .hero-profile {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-photo {
+    width: 70%;
+    margin-bottom: 15px;
+  }
+
+  .hero-info {
+    width: 100%;
+    text-align: left;
+  }
+}
