@@ -1,0 +1,184 @@
+body {
+  /* плавний градієнт від блідозеленого до золотого */
+  background: linear-gradient(135deg, #d8f3dc, #fff4c2);
+  font-family: 'Merriweather', serif;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+body.hero-page {
+  background-color: #f9f9f9; /* світліший фон */
+  font-family: 'Merriweather', serif; /* тепліший шрифт */
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+.hero-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* розводить кнопку і цитату */
+  margin-bottom: 30px;
+}
+
+.back-link {
+  font-size: 14px;
+  color: #555;
+  text-decoration: none;
+}
+.back-link:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+.hero-quote {
+  flex: 1; /* займає решту простору */
+  text-align: left; /* вирівнює текст по лівому краю */
+  margin-left: 20px; /* відступ між кнопкою і цитатою */
+}
+
+  .hero-quote blockquote {
+  position: relative;
+  font-size: 22px;
+  font-style: italic;
+  color: #2c3e50;
+  border-left: 4px solid #27ae60; /* насичений зелений */
+  padding: 20px 30px;
+  margin: 20px auto;
+  background-color: #fdfdf6;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+/* декоративні лапки */
+.hero-quote blockquote::before {
+  content: "“";
+  font-size: 48px;
+  color: #27ae60;
+  position: absolute;
+  top: -10px;
+  left: 10px;
+}
+
+.hero-quote blockquote::after {
+  content: "”";
+  font-size: 48px;
+  color: #27ae60;
+  position: absolute;
+  bottom: -20px;
+  right: 15px;
+}
+ 
+
+ .hero-profile {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 20px;
+  padding-right: 140px; /* резервує місце під орнамент */
+  background: url("../images/vyshyvka.jpg") repeat-y right top;
+  background-size: 120px auto; /* ширина орнаменту */
+}
+.hero-info {
+  flex: 1;
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: #fffef5;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.hero-photo {
+  flex: 0 0 455px; /* фото займає фіксовану ширину */
+}
+
+ .hero-photo img {
+  max-width: 100%;  /* картинка підлаштовується під ширину контейнера */
+  height: auto;       /* пропорційне масштабування */
+  border-radius: 8px; /* легке заокруглення кутів */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15); /* тінь для виразності */
+  display: block;
+  margin: 0 auto;     /* центрування всередині блоку */
+}
+
+@media (max-width: 600px) {
+  .hero-photo img {
+    width: 100%;   /* фото займає всю ширину контейнера */
+    max-width: 300px; /* але не більше 300px */
+  }
+.hero-profile {
+    background: none;
+    padding-right: 0;
+  }
+.hero-bio p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+ .hero-memories h2 {
+    font-size: 20px;
+  }
+.hero-info h1 {
+    font-size: 22px;
+  }
+.hero-quote blockquote {
+    font-size: 18px;
+    padding: 15px 20px;
+  }
+.hero-quote blockquote::before,
+  .hero-quote blockquote::after {
+    font-size: 32px;
+  }
+
+}
+.hero-dates {
+  font-style: italic;
+  color: #666;
+}
+.hero-bio p {
+  text-align: justify;
+  font-size: 18px;   /* трохи більший за стандартний */
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+
+.hero-memories {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #fafafa; /* легкий фон для відокремлення */
+  border-radius: 8px;
+}
+
+.hero-memories h2 {
+  font-size: 24px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 8px;
+}
+
+.memory {
+  background-color: #fdfdf6;
+  border-left: 4px  solid #27ae60; /* символічна зелена смуга */
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+.memory p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0 0 10px 0;
+  font-style: italic;
+  color: #333;
+}
+
+.memory-author {
+  display: block;
+  margin-top: 5px;
+  font-size: 14px;
+  color: #666;
+  text-align: right;
+}
