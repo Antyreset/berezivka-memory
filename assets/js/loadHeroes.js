@@ -26,15 +26,15 @@
      heroesToShow.forEach(hero => {
   const card = document.createElement('div');
   card.className = 'hero-card';
-  card.innerHTML = `
-    <img src="${hero.photo}" alt="${hero.name}">
-    <h3 class="hero-name">
-  <a href="hero-pages/${hero.id}.html">${hero.name} ${hero.surname}</a>
-</h3>
-    <p><em>${hero.birthDate}–${hero.deathDate}</em></p>
-    <p><strong>${hero.rank}</strong>, ${hero.unit}</p>
-    <p>${hero.bio}</p>
-  `;
+   card.innerHTML = `
+  <img src="${hero.photo}" alt="${hero.name}">
+  <h3 class="hero-name">
+    <a href="${hero.page}">${hero.name}</a>
+  </h3>
+  <p><em>${hero.birthDate} – ${hero.deathDate}</em></p>
+  <p><strong>${hero.rank}</strong>, ${hero.unit}</p>
+  <p>${hero.bio}</p>
+`;
   container.appendChild(card);
 });
 
