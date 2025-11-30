@@ -1,4 +1,4 @@
- document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
   let heroesData = [];
   let currentPage = 1;
   const heroesPerPage = 12;
@@ -23,20 +23,20 @@
     const endIndex = startIndex + heroesPerPage;
     const heroesToShow = heroesArray.slice(startIndex, endIndex);
 
-     heroesToShow.forEach(hero => {
-  const card = document.createElement('div');
-  card.className = 'hero-card';
-   card.innerHTML = `
-  <img src="${hero.photo}" alt="${hero.name}">
-  <h3 class="hero-name">
-    <a href="${hero.page}">${hero.name}</a>
-  </h3>
-  <p><em>${hero.birthDate} – ${hero.deathDate}</em></p>
-  <p><strong>${hero.rank}</strong>, ${hero.unit}</p>
-  <p>${hero.bio}</p>
-`;
-  container.appendChild(card);
-});
+    heroesToShow.forEach(hero => {
+      const card = document.createElement('div');
+      card.className = 'hero-card';
+      card.innerHTML = `
+        <img src="${hero.photo}" alt="${hero.name}">
+        <h3 class="hero-name">
+          <a href="${hero.page}">${hero.name}</a>
+        </h3>
+        <p><em>${hero.birthDate_text} – ${hero.deathDate_text}</em></p>
+        <p><strong>${hero.rank}</strong>, ${hero.unit}</p>
+        <p>${hero.bio}</p>
+      `;
+      container.appendChild(card);
+    });
 
     renderPagination(heroesArray.length, heroesArray);
   }
@@ -111,14 +111,14 @@
     } else if (currentSort.field === 'birthDate') {
       sorted.sort((a, b) =>
         currentSort.direction === 'asc'
-          ? parseInt(a.birthDate) - parseInt(b.birthDate)
-          : parseInt(b.birthDate) - parseInt(a.birthDate)
+          ? new Date(a.birthDate_iso) - new Date(b.birthDate_iso)
+          : new Date(b.birthDate_iso) - new Date(a.birthDate_iso)
       );
     } else if (currentSort.field === 'deathDate') {
       sorted.sort((a, b) =>
         currentSort.direction === 'asc'
-          ? parseInt(a.deathDate) - parseInt(b.deathDate)
-          : parseInt(b.deathDate) - parseInt(a.deathDate)
+          ? new Date(a.deathDate_iso) - new Date(b.deathDate_iso)
+          : new Date(b.deathDate_iso) - new Date(a.deathDate_iso)
       );
     }
 
