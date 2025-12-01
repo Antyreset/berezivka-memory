@@ -84,7 +84,7 @@
   "birthDate_text": "1 червня 1980 року",
   "deathDate_iso": "2024-06-17",
   "deathDate_text": "17 червня 2024 року",
-  "photo": "assets/images/heroesphoto/8.png",
+  "photo": "assets/images/heroesphoto/8.jpg",
   "page": "heroes/bondar.html"
 },
   {
@@ -312,7 +312,7 @@
   "birthDate_text": "12 липня 1973 року",
   "deathDate_iso": "2024-07-18",
   "deathDate_text": "18 липня 2024 року",
-  "photo": "assets/images/heroesphoto/29.png",
+  "photo": "assets/images/heroesphoto/29.jpg",
   "page": "heroes/galyckyi.html"
 },
   {
@@ -365,7 +365,7 @@
   "birthDate_text": "21 серпня 1997 року",
   "deathDate_iso": "2025-07-09",
   "deathDate_text": "9 липня 2025 року",
-  "photo": "assets/images/heroesphoto/34.png",
+  "photo": "assets/images/heroesphoto/34.jpg",
   "page": "heroes/momotenko.html"
 },
  {
