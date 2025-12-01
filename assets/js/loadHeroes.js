@@ -33,7 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
         </h3>
         <p><em>${hero.birthDate_text} – ${hero.deathDate_text}</em></p>
         <p><strong>${hero.rank}</strong>, ${hero.unit}</p>
-        <p>${hero.bio}</p>
       `;
       container.appendChild(card);
     });
@@ -73,7 +72,6 @@ document.addEventListener('DOMContentLoaded', () => {
         hero.name.toLowerCase().includes(query) ||
         hero.unit.toLowerCase().includes(query) ||
         hero.rank.toLowerCase().includes(query) ||
-        hero.bio.toLowerCase().includes(query)
       );
       currentPage = 1;
       applySorting();
