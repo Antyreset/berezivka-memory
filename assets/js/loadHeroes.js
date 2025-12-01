@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
       filteredHeroes = heroesData.filter(hero =>
         hero.name.toLowerCase().includes(query) ||
         hero.unit.toLowerCase().includes(query) ||
-        hero.rank.toLowerCase().includes(query) ||
+        hero.rank.toLowerCase().includes(query) 
       );
       currentPage = 1;
       applySorting();
