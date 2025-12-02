@@ -47,7 +47,7 @@
     <section id="memories-container">
       <!-- JavaScript вставить спогади тут -->
     </section>
-     <form class="memory-form" method="post" enctype="multipart/form-data" action="submitMemory.php">
+    <form id="memoryForm" class="memory-form" method="POST" enctype="multipart/form-data" action="https://formcarry.com/s/FQ_optC0Jng">
   <h2 class="form-title">Залишіть свій спогад</h2>
   <p class="form-subtitle">Ми збережемо його з гідністю.</p>
 
@@ -62,21 +62,56 @@
   </div>
 
   <div class="form-group">
-     <label for="memory">Спогад:</label>
-<textarea name="memory" id="memory" rows="6" required></textarea>
+    <label for="memory">Спогад:</label>
+    <textarea name="memory" id="memory" rows="6" required></textarea>
   </div>
 
-   <div class="form-group">
-   
-  <label for="photo" class="custom-file-label">Обрати фото</label>
-  <input type="file" name="photo" id="photo" class="hidden-file" accept="image/*" />
-  <span id="file-name">Файл не обрано</span>
-</div>
+  <div class="form-group">
+    <label for="photo" class="custom-file-label">Обрати фото</label>
+    <input type="file" name="photo" id="photo" class="hidden-file" accept="image/*" />
+    <span id="file-name">Файл не обрано</span>
+  </div>
 
   <div class="form-group">
     <button type="submit">Надіслати</button>
   </div>
 </form>
+
+<div id="thankYouMessage" style="display:none; margin-top:10px; color:green;">
+  Дякуємо, ваш спогад збережено!
+</div>
+
+<script>
+  const form = document.getElementById('memoryForm');
+  const thankYou = document.getElementById('thankYouMessage');
+  const fileInput = document.getElementById('photo');
+  const fileName = document.getElementById('file-name');
+
+  // показуємо назву файлу
+  fileInput.addEventListener('change', () => {
+    fileName.textContent = fileInput.files.length > 0 ? fileInput.files[0].name : "Файл не обрано";
+  });
+
+  // AJAX-відправка
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const data = new FormData(form);
+
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: { Accept: 'application/json' }
+    });
+
+    if (response.ok) {
+      form.reset();
+      fileName.textContent = "Файл не обрано";
+      thankYou.style.display = 'block';
+    } else {
+      alert("Сталася помилка. Спробуйте ще раз.");
+    }
+  });
+</script>
   </main>
   <footer>
   <div class="content-wrapper">
