@@ -62,17 +62,46 @@
     </section>
 
     <section>
-      <h2>📎 Форма для участі</h2>
-      <form action="https://formspree.io/f/xkgpgnvq" method="POST" class="join-form">
-        <label for="name">Ваше ім’я:</label>
-        <input type="text" id="name" name="name" required />
+  <h2>📎 Форма для участі</h2>
+  <form id="joinForm" action="https://formcarry.com/s/CmWbUpZwmt6" method="POST" class="join-form">
+    <label for="name">Ваше ім’я:</label>
+    <input type="text" id="name" name="name" required />
 
-        <label for="message">Повідомлення або пропозиція:</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+    <label for="message">Повідомлення або пропозиція:</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
 
-        <button type="submit">Надіслати</button>
-      </form>
-    </section>
+    <button type="submit">Надіслати</button>
+  </form>
+
+  <div id="joinThankYou" style="display:none; margin-top:10px; color:green;">
+    Дякуємо, ми отримали вашу заявку!
+  </div>
+</section>
+
+<script>
+  const joinForm = document.getElementById('joinForm');
+  const joinThankYou = document.getElementById('joinThankYou');
+
+  joinForm.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const data = new FormData(joinForm);
+
+    const response = await fetch(joinForm.action, {
+      method: joinForm.method,
+      body: data,
+      headers: { Accept: 'application/json' }
+    });
+
+    if (response.ok) {
+      joinForm.reset();
+      joinThankYou.style.display = 'block';
+    } else {
+      alert("Сталася помилка. Спробуйте ще раз.");
+    }
+  });
+</script>
+
+
      </div>
   </main>
   <footer>
