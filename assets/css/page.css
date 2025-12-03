@@ -1,6 +1,6 @@
+/* плавний градієнт: блакить угорі → блідозелений → золотий */
 body {
-  /* плавний градієнт від блідозеленого до золотого */
-  background: linear-gradient(135deg, #d8f3dc, #fff4c2);
+  background: linear-gradient(to bottom, #87CEEB 0%, #d8f3dc 40%, #fff4c2 100%);
   font-family: 'Merriweather', serif;
   color: #333;
   margin: 0;
@@ -194,3 +194,4 @@ body.hero-page {
     font-size: 32px;
   }
 }
+
